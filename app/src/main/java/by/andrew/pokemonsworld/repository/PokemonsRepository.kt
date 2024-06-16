@@ -13,7 +13,7 @@ object PokemonsRepository {
             height = 7,
             image = R.drawable.bulbasaur
         ),
-        1 to Pokemon(
+        2 to Pokemon(
             id = 2,
             name = "Ivynsaur",
             types = listOf("Grass", "Poison"),
@@ -63,7 +63,7 @@ object PokemonsRepository {
         )
     )
 
-    fun getPokemonById(id: Int): Pokemon? {
+    fun getPokemonById(id: Int?): Pokemon? {
         return pokemons[id]
     }
 }

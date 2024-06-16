@@ -2,6 +2,7 @@ package by.andrew.pokemonsworld
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import by.andrew.pokemonsworld.databinding.ActivityMainBinding
 
@@ -13,45 +14,18 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.bulbasaur.setOnClickListener {
+        setupClickListener(binding.bulbasaur, 1)
+        setupClickListener(binding.ivynsaur, 2)
+        setupClickListener(binding.venusaur, 3)
+        setupClickListener(binding.charmander, 4)
+        setupClickListener(binding.charmeleon, 5)
+        setupClickListener(binding.charizard, 6)
+        setupClickListener(binding.squirtle, 7)
+    }
+    private fun setupClickListener(view: View, id: Int) {
+        view.setOnClickListener {
             val intent = Intent(this@MainActivity, DetailsActivity::class.java).apply {
-                putExtra("id", 1)
-            }
-            startActivity(intent)
-        }
-        binding.ivynsaur.setOnClickListener {
-            val intent = Intent(this@MainActivity, DetailsActivity::class.java).apply {
-                putExtra("id", 2)
-            }
-            startActivity(intent)
-        }
-        binding.venusaur.setOnClickListener {
-            val intent = Intent(this@MainActivity, DetailsActivity::class.java).apply {
-                putExtra("id", 3)
-            }
-            startActivity(intent)
-        }
-        binding.charmander.setOnClickListener {
-            val intent = Intent(this@MainActivity, DetailsActivity::class.java).apply {
-                putExtra("id", 4)
-            }
-            startActivity(intent)
-        }
-        binding.charmeleon.setOnClickListener {
-            val intent = Intent(this@MainActivity, DetailsActivity::class.java).apply {
-                putExtra("id", 5)
-            }
-            startActivity(intent)
-        }
-        binding.charizard.setOnClickListener {
-            val intent = Intent(this@MainActivity, DetailsActivity::class.java).apply {
-                putExtra("id", 6)
-            }
-            startActivity(intent)
-        }
-        binding.squirtle.setOnClickListener {
-            val intent = Intent(this@MainActivity, DetailsActivity::class.java).apply {
-                putExtra("id", 7)
+                putExtra("id", id)
             }
             startActivity(intent)
         }

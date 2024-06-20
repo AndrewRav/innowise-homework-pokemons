@@ -11,7 +11,7 @@ object PokemonsRepository {
             types = listOf("Grass", "Poison"),
             weight = 69,
             height = 7,
-            image = R.drawable.bulbasaur
+            imageRes = R.drawable.bulbasaur
         ),
         2 to Pokemon(
             id = 2,
@@ -19,7 +19,7 @@ object PokemonsRepository {
             types = listOf("Grass", "Poison"),
             weight = 130,
             height = 10,
-            image = R.drawable.ivynsaur
+            imageRes = R.drawable.ivynsaur
         ),
         3 to Pokemon(
             id = 3,
@@ -27,7 +27,7 @@ object PokemonsRepository {
             types = listOf("Grass", "Poison"),
             weight = 1000,
             height = 20,
-            image = R.drawable.venusaur
+            imageRes = R.drawable.venusaur
         ),
         4 to Pokemon(
             id = 4,
@@ -35,7 +35,7 @@ object PokemonsRepository {
             types = listOf("Fire"),
             weight = 85,
             height = 6,
-            image = R.drawable.charmander
+            imageRes = R.drawable.charmander
         ),
         5 to Pokemon(
             id = 5,
@@ -43,7 +43,7 @@ object PokemonsRepository {
             types = listOf("Fire"),
             weight = 190,
             height = 11,
-            image = R.drawable.charmeleon
+            imageRes = R.drawable.charmeleon
         ),
         6 to Pokemon(
             id = 6,
@@ -51,7 +51,7 @@ object PokemonsRepository {
             types = listOf("Fire", "Flying"),
             weight = 905,
             height = 17,
-            image = R.drawable.charizard
+            imageRes = R.drawable.charizard
         ),
         7 to Pokemon(
             id = 7,
@@ -59,7 +59,7 @@ object PokemonsRepository {
             types = listOf("Water"),
             weight = 90,
             height = 5,
-            image = R.drawable.squirtle
+            imageRes = R.drawable.squirtle
         )
     )
 

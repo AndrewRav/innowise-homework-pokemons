@@ -5,6 +5,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import by.andrew.pokemonsworld.databinding.ActivityDetailsBinding
+import by.andrew.pokemonsworld.recyclerView.TypesAdapter
 import by.andrew.pokemonsworld.repository.PokemonsRepository
 
 class DetailsActivity : AppCompatActivity() {
@@ -27,7 +28,7 @@ class DetailsActivity : AppCompatActivity() {
             binding.nameTextView.text = pokemon.name
             binding.weightTextView.text = "${pokemon.weight} kg"
             binding.heightTextView.text = "${pokemon.height} cm"
-            val adapter = TypeAdapter(pokemon.types)
+            val adapter = TypesAdapter(pokemon.types)
             binding.typesRecyclerView.layoutManager = LinearLayoutManager(this)
             binding.typesRecyclerView.adapter = adapter
         } ?: run {

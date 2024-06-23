@@ -20,9 +20,8 @@
 
     <ImageView
         android:id="@+id/image_view"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:src="@drawable/bulbasaur"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -32,19 +31,20 @@
 
     <TextView
         android:id="@+id/name_text_view"
-        android:layout_width="118dp"
-        android:layout_height="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:textSize="21sp"
         android:textStyle="bold"
         android:tooltipText="Bulbasaur"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/image_view" />
+        app:layout_constraintTop_toBottomOf="@+id/image_view"
+        tools:text="Pokemon Name"/>
 
     <TextView
         android:id="@+id/weight_label_text_view"
-        android:layout_width="56dp"
-        android:layout_height="28dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginEnd="116dp"
         android:text="Weight: "
         android:textSize="18sp"
@@ -56,8 +56,8 @@
 
     <TextView
         android:id="@+id/weight_text_View"
-        android:layout_width="72dp"
-        android:layout_height="26dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:textSize="18sp"
         android:tooltipText="69 kg"
@@ -66,8 +66,8 @@
 
     <TextView
         android:id="@+id/height_label_text_view"
-        android:layout_width="56dp"
-        android:layout_height="28dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:text="Height: "
         android:textSize="18sp"
@@ -77,8 +77,8 @@
 
     <TextView
         android:id="@+id/height_text_view"
-        android:layout_width="56dp"
-        android:layout_height="26dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:textSize="18sp"
         android:tooltipText="7 cm"
@@ -87,8 +87,8 @@
 
     <TextView
         android:id="@+id/type_label_text_view"
-        android:layout_width="56dp"
-        android:layout_height="28dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:text="Types: "
         android:textSize="18sp"
@@ -105,9 +105,8 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/types_recycler_view"
-        android:layout_width="132dp"
-        android:layout_height="184dp"
-        android:layout_marginEnd="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/type_label_text_view" />

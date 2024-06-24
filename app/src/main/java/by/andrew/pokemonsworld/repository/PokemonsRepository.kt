@@ -63,6 +63,11 @@ object PokemonsRepository {
         )
     )
 
+    fun getPokemonList(): List<Pokemon> {
+        val pokemonList = pokemons.values.toList()
+        return pokemonList
+    }
+
     fun getPokemonById(id: Int?): Pokemon? {
         return pokemons[id]
     }

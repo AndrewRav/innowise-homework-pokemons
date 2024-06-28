@@ -19,17 +19,20 @@ class MainActivity : AppCompatActivity() {
 
         val adapter = PokemonListAdapter().apply {
             onClick = { pokemon ->
-                val intent = Intent(this@MainActivity, DetailsActivity::class.java).apply {
-                    putExtra("id", pokemon.id)
-                }
+                val intent = Intent(this@MainActivity, DetailsActivity::class.java)
+                    .apply {
+                        putExtra("id", pokemon.id)
+                    }
                 startActivity(intent)
             }
         }
 
         binding.recycler.adapter = adapter
 
-        val dividerItemDecoration = androidx.recyclerview.widget.DividerItemDecoration(this,
-            LinearLayoutManager.VERTICAL)
+        val dividerItemDecoration = androidx.recyclerview.widget.DividerItemDecoration(
+            this,
+            LinearLayoutManager.VERTICAL
+        )
         ContextCompat.getDrawable(this, R.drawable.divider)?.let {
             dividerItemDecoration.setDrawable(it)
         }

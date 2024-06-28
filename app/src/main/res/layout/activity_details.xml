@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DetailsActivity"
-    android:background="@color/light_orange">
+    android:background="@color/light_orange"
+    tools:context=".DetailsActivity">
 
     <Button
         android:id="@+id/button_back_view"
@@ -14,9 +14,9 @@
         android:layout_margin="16dp"
         android:text="@string/back"
         android:textSize="16sp"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/image_view"
@@ -26,8 +26,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/name_text_view"
@@ -39,7 +38,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/image_view"
-        tools:text="Pokemon Name"/>
+        tools:text="Pokemon Name" />
 
     <TextView
         android:id="@+id/weight_label_text_view"
@@ -61,8 +60,8 @@
         android:layout_marginStart="8dp"
         android:textSize="18sp"
         android:tooltipText="69 kg"
-        app:layout_constraintTop_toTopOf="@+id/weight_label_text_view"
-        app:layout_constraintStart_toEndOf="@+id/weight_label_text_view" />
+        app:layout_constraintStart_toEndOf="@+id/weight_label_text_view"
+        app:layout_constraintTop_toTopOf="@+id/weight_label_text_view" />
 
     <TextView
         android:id="@+id/height_label_text_view"
@@ -82,8 +81,8 @@
         android:layout_marginStart="8dp"
         android:textSize="18sp"
         android:tooltipText="7 cm"
-        app:layout_constraintTop_toTopOf="@+id/height_label_text_view"
-        app:layout_constraintStart_toEndOf="@+id/height_label_text_view" />
+        app:layout_constraintStart_toEndOf="@+id/height_label_text_view"
+        app:layout_constraintTop_toTopOf="@+id/height_label_text_view" />
 
     <TextView
         android:id="@+id/type_label_text_view"

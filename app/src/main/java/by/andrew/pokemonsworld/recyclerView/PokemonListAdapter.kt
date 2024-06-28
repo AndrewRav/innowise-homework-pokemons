@@ -7,13 +7,17 @@ import androidx.recyclerview.widget.RecyclerView
 import by.andrew.pokemonsworld.databinding.ItemPokemonBinding
 import by.andrew.pokemonsworld.model.Pokemon
 
-class PokemonListAdapter: RecyclerView.Adapter<PokemonViewHolder>() {
+class PokemonListAdapter : RecyclerView.Adapter<PokemonViewHolder>() {
     private var items = emptyList<Pokemon>()
     var onClick: (Pokemon) -> Unit = {}
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PokemonViewHolder {
-        return PokemonViewHolder(ItemPokemonBinding.inflate(LayoutInflater.from(parent.context),
-            parent, false))
+        return PokemonViewHolder(
+            ItemPokemonBinding.inflate(
+                LayoutInflater.from(parent.context),
+                parent, false
+            )
+        )
     }
 
     override fun getItemCount(): Int = items.size

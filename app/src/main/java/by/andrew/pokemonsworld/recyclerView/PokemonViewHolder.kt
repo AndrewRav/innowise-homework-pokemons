@@ -6,9 +6,9 @@ import by.andrew.pokemonsworld.model.Pokemon
 
 class PokemonViewHolder(
     private val binding: ItemPokemonBinding
-): ViewHolder(binding.root) {
+) : ViewHolder(binding.root) {
 
-    fun bind (model: Pokemon, onClick: (Pokemon) -> Unit) {
+    fun bind(model: Pokemon, onClick: (Pokemon) -> Unit) {
         binding.pokemonName.text = model.name
         binding.root.setOnClickListener {
             onClick(model)

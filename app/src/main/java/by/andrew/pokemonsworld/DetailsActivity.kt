@@ -20,20 +20,22 @@ class DetailsActivity : AppCompatActivity() {
         binding.buttonBackView.setOnClickListener {
             finish()
         }
-
-        val pokemonId = intent.extras?.getInt("id")
-        val pokemon = PokemonsRepository.getPokemonById(pokemonId)
-        pokemon?.let {
-            binding.imageView.setImageResource(pokemon.imageRes)
-            binding.nameTextView.text = pokemon.name
-            binding.weightTextView.text = "${pokemon.weight} kg"
-            binding.heightTextView.text = "${pokemon.height} cm"
-            val adapter = TypesAdapter(pokemon.types)
-            binding.typesRecyclerView.layoutManager = LinearLayoutManager(this)
-            binding.typesRecyclerView.adapter = adapter
-        } ?: run {
-            Toast.makeText(this, "Invalid pokemon id", Toast.LENGTH_SHORT).show()
-            finish()
+        with(binding) {
+            val pokemonId = intent.extras?.getInt("id")
+            val pokemon = PokemonsRepository.getPokemonById(pokemonId)
+            pokemon?.let {
+                binding.imageView.setImageResource(pokemon.imageRes)
+                binding.nameTextView.text = pokemon.name
+                binding.weightTextView.text = "${pokemon.weight} kg"
+                binding.heightTextView.text = "${pokemon.height} cm"
+                val adapter = TypesAdapter(pokemon.types)
+                binding.typesRecyclerView.layoutManager = LinearLayoutManager(this@DetailsActivity)
+                binding.typesRecyclerView.adapter = adapter
+            } ?: run {
+                Toast.makeText(this@DetailsActivity, "Invalid pokemon id", Toast.LENGTH_SHORT)
+                    .show()
+                finish()
+            }
         }
     }
 }
